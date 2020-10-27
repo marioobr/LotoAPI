@@ -14,8 +14,6 @@ namespace APILoto.Models
         public int UserId { get; set; }
         public DateTime Date { get; set; }
         public double Total { get; set; }
-
-        public virtual User User { get; set; }
         public virtual ICollection<BillDetail> BillDetail { get; set; }
     }
 }

@@ -7,12 +7,10 @@ namespace APILoto.Models
     {
         public Role()
         {
-            User = new HashSet<User>();
+          
         }
 
         public int RoleId { get; set; }
         public string Description { get; set; }
-
-        public virtual ICollection<User> User { get; set; }
     }
 }

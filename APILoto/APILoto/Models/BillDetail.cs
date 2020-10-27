@@ -13,7 +13,7 @@ namespace APILoto.Models
         public int Number { get; set; }
         public double Investment { get; set; }
 
-        public virtual Bill Bill { get; set; }
+        //public virtual Bill Bill { get; set; }
         public virtual Draw Draw { get; set; }
     }
 }

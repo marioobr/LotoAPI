@@ -28,7 +28,7 @@ namespace APILoto
         public void ConfigureServices(IServiceCollection services)
         {
             var connection = Configuration.GetConnectionString("APILottery");
-            services.AddDbContextPool<LotteryContext>(opt => opt.UseSqlServer(connection));
+            services.AddDbContext<LotteryContext>(opt => opt.UseLazyLoadingProxies().UseSqlServer(connection));
             services.AddControllers();
         }
 

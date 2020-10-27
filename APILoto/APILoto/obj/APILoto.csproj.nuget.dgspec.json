@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\APILoto\\APILoto.csproj": {}
+    "C:\\Users\\Direccion ENAH\\Desktop\\ProyectoAPI\\LotoAPI\\APILoto\\APILoto\\APILoto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\APILoto\\APILoto.csproj": {
+    "C:\\Users\\Direccion ENAH\\Desktop\\ProyectoAPI\\LotoAPI\\APILoto\\APILoto\\APILoto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\APILoto\\APILoto.csproj",
+        "projectUniqueName": "C:\\Users\\Direccion ENAH\\Desktop\\ProyectoAPI\\LotoAPI\\APILoto\\APILoto\\APILoto.csproj",
         "projectName": "APILoto",
-        "projectPath": "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\APILoto\\APILoto.csproj",
-        "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\APILoto\\obj\\",
+        "projectPath": "C:\\Users\\Direccion ENAH\\Desktop\\ProyectoAPI\\LotoAPI\\APILoto\\APILoto\\APILoto.csproj",
+        "packagesPath": "C:\\Users\\Direccion ENAH\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Direccion ENAH\\Desktop\\ProyectoAPI\\LotoAPI\\APILoto\\APILoto\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\Direccion ENAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -43,7 +38,15 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[3.1.9, )"
             },
@@ -84,7 +87,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
