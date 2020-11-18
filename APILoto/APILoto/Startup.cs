@@ -17,6 +17,7 @@ namespace APILoto
 {
     public class Startup
     {
+        readonly string OriginPolicy = "_originPolicy";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -27,6 +28,7 @@ namespace APILoto
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddCors();
             var connection = Configuration.GetConnectionString("APILottery");
             services.AddDbContext<LotteryContext>(opt => opt.UseLazyLoadingProxies().UseSqlServer(connection));
             services.AddControllers();
@@ -35,6 +37,14 @@ namespace APILoto
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(options => {
+
+                options.WithOrigins("http://localhost:1234");
+                options.AllowAnyMethod();
+                options.AllowAnyHeader();
+                
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

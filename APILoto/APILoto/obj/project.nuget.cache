@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "i9jEgV5IcUpubBKvu+WeCv6XES/5URhCF9R9wEUSGl8uEwk06EjcQ6z/3mxoDu4sLFZUPgy1NI96hC/Ko4mELg==",
+  "dgSpecHash": "fEnmlZ3Ix1WQlVYV702I9QOtWmABXoIhBEAj+tU+V0TAjc2nVCuTVQrAt2OoRnnn85wOatU3cI8IuerJS3F8sg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Direccion ENAH\\Desktop\\ProyectoAPI\\LotoAPI\\APILoto\\APILoto\\APILoto.csproj",
+  "projectFilePath": "C:\\Users\\Direccion ENAH\\Desktop\\LotoAPI\\APILoto\\APILoto\\APILoto.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Direccion ENAH\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\Direccion ENAH\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.9\\microsoft.aspnetcore.authentication.jwtbearer.3.1.9.nupkg.sha512",
