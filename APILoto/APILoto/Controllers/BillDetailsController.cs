@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using APILoto.Models;
+using Dominio;
+using Persistencia;
 
 namespace APILoto.Controllers
 {

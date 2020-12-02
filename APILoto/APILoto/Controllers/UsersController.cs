@@ -5,7 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using APILoto.Models;
+using Dominio;
+using Persistencia;
+using MediatR;
+using Aplicación.Users;
 
 namespace APILoto.Controllers
 {
@@ -13,25 +16,28 @@ namespace APILoto.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
+
+        private readonly IMediator _mediator;
         private readonly LotteryContext _context;
 
-        public UsersController(LotteryContext context)
+        public UsersController(IMediator mediator, LotteryContext context)
         {
             _context = context;
+            _mediator = mediator;
         }
 
         // GET: api/Users
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetUser()
         {
-            return await _context.User.ToListAsync();
+            return await _mediator.Send(new Consulta.ListaUsers());
         }
 
         // GET: api/Users/5
         [HttpGet("{id}")]
         public async Task<ActionResult<User>> GetUser(int id)
         {
-            var user = await _context.User.FindAsync(id);
+            var user = await _mediator.Send(new ConsultaId.OneUser { Id = id});
 
             if (user == null)
             {
@@ -77,12 +83,9 @@ namespace APILoto.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<User>> PostUser(User user)
+        public async Task<ActionResult<Unit>> PostUser(New.Create data)
         {
-            _context.User.Add(user);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetUser", new { id = user.UserId }, user);
+            return await _mediator.Send(data);
         }
 
         // DELETE: api/Users/5
