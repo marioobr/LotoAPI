@@ -326,3 +326,5 @@ C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Humanizer
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\runtimes\linux-mips64\native\libe_sqlite3.so
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\FluentValidation.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.MvcApplicationPartsAssemblyInfo.cache

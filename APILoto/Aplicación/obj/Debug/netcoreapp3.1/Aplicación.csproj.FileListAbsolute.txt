@@ -11,3 +11,4 @@ C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Persi
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.csproj.CopyComplete
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.dll
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.pdb
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.csproj.CoreCompileInputs.cache

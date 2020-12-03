@@ -25,6 +25,7 @@
       "APILoto/1.0.0": {
         "dependencies": {
           "Aplicación": "1.0.0",
+          "FluentValidation": "9.3.0",
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.Design": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
