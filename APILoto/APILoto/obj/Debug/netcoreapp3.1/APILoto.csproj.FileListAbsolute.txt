@@ -290,8 +290,6 @@ C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\runtimes\
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.csprojAssemblyReference.cache
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.AssemblyInfoInputs.cache
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.AssemblyInfo.cs
-C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.csproj.CoreCompileInputs.cache
-C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.RazorTargetAssemblyInfo.cache
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.csproj.CopyComplete
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\staticwebassets\APILoto.StaticWebAssets.Manifest.cache
@@ -319,3 +317,12 @@ C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Persisten
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Aplicación.pdb
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Persistencia.pdb
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Humanizer.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\runtimes\linux-mips64\native\libe_sqlite3.so
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\FluentValidation.dll

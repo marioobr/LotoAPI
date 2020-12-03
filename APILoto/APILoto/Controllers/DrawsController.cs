@@ -45,7 +45,7 @@ namespace APILoto.Controllers
         // PUT: api/Draws/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
+        /*[HttpPut("{id}")]
         public async Task<IActionResult> PutDraw(int id, Draw draw)
         {
             if (id != draw.DrawId)
@@ -105,6 +105,6 @@ namespace APILoto.Controllers
         private bool DrawExists(int id)
         {
             return _context.Draw.Any(e => e.DrawId == id);
-        }
+        }*/
     }
 }

@@ -29,12 +29,6 @@ namespace Persistencia
                 entity.Property(e => e.Date)
                     .HasColumnName("Date_")
                     .HasColumnType("datetime");
-
-                entity.HasOne(d => d.User)
-                    .WithMany(p => p.Bill)
-                    .HasForeignKey(d => d.UserId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("BillPK_User");
             });
 
             modelBuilder.Entity<BillDetail>(entity =>

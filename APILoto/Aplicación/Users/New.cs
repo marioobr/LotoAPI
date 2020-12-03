@@ -6,6 +6,7 @@ using Persistencia;
 using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
+using FluentValidation;
 
 namespace Aplicación.Users
 {
@@ -20,6 +21,18 @@ namespace Aplicación.Users
             public string UserName { get; set; }
             public string Password { get; set; }
 
+        }
+        public class NuevoValidacion : AbstractValidator<Create>
+        {
+            public NuevoValidacion()
+            {
+                RuleFor(x => x.FirstNames).NotEmpty();
+                RuleFor(x => x.LastNames).NotEmpty();
+                RuleFor(x => x.Role).NotEmpty();
+                RuleFor(x => x.Password).NotEmpty();
+                RuleFor(x => x.UserName).NotEmpty();
+                RuleFor(x => x.State).NotEmpty();
+            }
         }
         public class Manejador : IRequestHandler<Create>
         {

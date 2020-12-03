@@ -9,7 +9,7 @@ C:\Users\Mario\Desktop\LotoAPI\APILoto\Persistencia\obj\Debug\netcoreapp3.1\Pers
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Persistencia\bin\Debug\netcoreapp3.1\Persistencia.pdb
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Persistencia\bin\Debug\netcoreapp3.1\Dominio.dll
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Persistencia\bin\Debug\netcoreapp3.1\Dominio.pdb
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.csproj.CoreCompileInputs.cache
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.csproj.CopyComplete
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.dll
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.pdb
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Persistencia\obj\Debug\netcoreapp3.1\Persistencia.csproj.CoreCompileInputs.cache

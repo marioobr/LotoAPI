@@ -6,10 +6,10 @@ namespace Dominio
 {
     public class Draw
     {
-        public Draw()
+        /*public Draw()
         {
             BillDetail = new HashSet<BillDetail>();
-        }
+        }*/
 
         public int DrawId { get; set; }
         public DateTime Date { get; set; }

@@ -45,7 +45,7 @@ namespace APILoto.Controllers
         // PUT: api/BillDetails/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
+        /*[HttpPut("{id}")]
         public async Task<IActionResult> PutBillDetail(int id, BillDetail billDetail)
         {
             if (id != billDetail.DetailId)
@@ -105,6 +105,6 @@ namespace APILoto.Controllers
         private bool BillDetailExists(int id)
         {
             return _context.BillDetail.Any(e => e.DetailId == id);
-        }
+        }*/
     }
 }

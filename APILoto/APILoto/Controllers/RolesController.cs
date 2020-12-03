@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Dominio;
 using Persistencia;
+using MediatR;
+using Aplicación.Roles;
 
 namespace APILoto.Controllers
 {
@@ -14,13 +16,14 @@ namespace APILoto.Controllers
     [ApiController]
     public class RolesController : ControllerBase
     {
+        private readonly IMediator _mediator;
         private readonly LotteryContext _context;
 
-        public RolesController(LotteryContext context)
+        public RolesController(IMediator mediator, LotteryContext context)
         {
             _context = context;
+            _mediator = mediator;
         }
-
         // GET: api/Roles
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Role>>> GetRole()
@@ -45,7 +48,7 @@ namespace APILoto.Controllers
         // PUT: api/Roles/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
+        /*[HttpPut("{id}")]
         public async Task<IActionResult> PutRole(int id, Role role)
         {
             if (id != role.RoleId)
@@ -78,12 +81,9 @@ namespace APILoto.Controllers
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
-        public async Task<ActionResult<Role>> PostRole(Role role)
+        public async Task<ActionResult<Unit>> PostRole(New.Create data)
         {
-            _context.Role.Add(role);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetRole", new { id = role.RoleId }, role);
+            return await _mediator.Send(data);
         }
 
         // DELETE: api/Roles/5
@@ -105,6 +105,6 @@ namespace APILoto.Controllers
         private bool RoleExists(int id)
         {
             return _context.Role.Any(e => e.RoleId == id);
-        }
+        }*/
     }
 }

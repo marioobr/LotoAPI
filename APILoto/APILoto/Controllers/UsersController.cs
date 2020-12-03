@@ -50,7 +50,7 @@ namespace APILoto.Controllers
         // PUT: api/Users/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPut("{id}")]
+        /*[HttpPut("{id}")]
         public async Task<IActionResult> PutUser(int id, User user)
         {
             if (id != user.UserId)
@@ -77,7 +77,7 @@ namespace APILoto.Controllers
             }
 
             return NoContent();
-        }
+        }*/
 
         // POST: api/Users
         // To protect from overposting attacks, enable the specific properties you want to bind to, for

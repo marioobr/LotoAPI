@@ -8,7 +8,6 @@ C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Domin
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Persistencia.dll
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Dominio.pdb
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Persistencia.pdb
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.csproj.CoreCompileInputs.cache
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.csproj.CopyComplete
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.dll
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.pdb
