@@ -21,6 +21,19 @@ namespace APILoto.Controllers
             _context = context;
         }
 
+
+        // POST: api/Draws
+        // To protect from overposting attacks, enable the specific properties you want to bind to, for
+        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        [HttpPost]
+        public async Task<ActionResult<Draw>> PostDraw(Draw draw)
+        {
+            _context.Draw.Add(draw);
+            await _context.SaveChangesAsync();
+
+            return CreatedAtAction("GetDraw", new { id = draw.DrawId }, draw);
+        }
+
         // GET: api/Draws
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Draw>>> GetDraw()

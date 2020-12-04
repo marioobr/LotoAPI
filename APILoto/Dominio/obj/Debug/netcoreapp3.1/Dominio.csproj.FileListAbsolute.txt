@@ -10,3 +10,15 @@ C:\Users\Mario\Desktop\LotoAPI\APILoto\Dominio\obj\Debug\netcoreapp3.1\Dominio.c
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Dominio\bin\Debug\netcoreapp3.1\Dominio.runtimeconfig.json
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Dominio\bin\Debug\netcoreapp3.1\Dominio.runtimeconfig.dev.json
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Dominio\obj\Debug\netcoreapp3.1\Dominio.genruntimeconfig.cache
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\bin\Debug\netcoreapp3.1\Dominio.deps.json
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\bin\Debug\netcoreapp3.1\Dominio.runtimeconfig.json
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\bin\Debug\netcoreapp3.1\Dominio.runtimeconfig.dev.json
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\obj\Debug\netcoreapp3.1\Dominio.csprojAssemblyReference.cache
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfoInputs.cache
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\obj\Debug\netcoreapp3.1\Dominio.AssemblyInfo.cs
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\obj\Debug\netcoreapp3.1\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\obj\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\obj\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Dominio\obj\Debug\netcoreapp3.1\Dominio.genruntimeconfig.cache

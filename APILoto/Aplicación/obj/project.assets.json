@@ -5932,27 +5932,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Mario\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\Direccion ENAH\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\Aplicación\\Aplicación.csproj",
+      "projectUniqueName": "C:\\Users\\Direccion ENAH\\Desktop\\LotoAPI\\APILoto\\Aplicación\\Aplicación.csproj",
       "projectName": "Aplicación",
-      "projectPath": "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\Aplicación\\Aplicación.csproj",
-      "packagesPath": "C:\\Users\\Mario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\Aplicación\\obj\\",
+      "projectPath": "C:\\Users\\Direccion ENAH\\Desktop\\LotoAPI\\APILoto\\Aplicación\\Aplicación.csproj",
+      "packagesPath": "C:\\Users\\Direccion ENAH\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Direccion ENAH\\Desktop\\LotoAPI\\APILoto\\Aplicación\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Mario\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Users\\Direccion ENAH\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -5964,11 +5957,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\Dominio\\Dominio.csproj": {
-              "projectPath": "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\Dominio\\Dominio.csproj"
+            "C:\\Users\\Direccion ENAH\\Desktop\\LotoAPI\\APILoto\\Dominio\\Dominio.csproj": {
+              "projectPath": "C:\\Users\\Direccion ENAH\\Desktop\\LotoAPI\\APILoto\\Dominio\\Dominio.csproj"
             },
-            "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\Persistencia\\Persistencia.csproj": {
-              "projectPath": "C:\\Users\\Mario\\Desktop\\LotoAPI\\APILoto\\Persistencia\\Persistencia.csproj"
+            "C:\\Users\\Direccion ENAH\\Desktop\\LotoAPI\\APILoto\\Persistencia\\Persistencia.csproj": {
+              "projectPath": "C:\\Users\\Direccion ENAH\\Desktop\\LotoAPI\\APILoto\\Persistencia\\Persistencia.csproj"
             }
           }
         }
@@ -6006,7 +5999,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.402\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
       }
     }
   }
