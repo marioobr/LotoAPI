@@ -2,10 +2,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Dominio;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace Persistencia
 {
-    public partial class LotteryContext : DbContext
+    public partial class LotteryContext : IdentityDbContext<User>
     {
 
         public LotteryContext(DbContextOptions<LotteryContext> options)
@@ -16,12 +17,12 @@ namespace Persistencia
         public virtual DbSet<Bill> Bill { get; set; }
         public virtual DbSet<BillDetail> BillDetail { get; set; }
         public virtual DbSet<Draw> Draw { get; set; }
-        public virtual DbSet<Role> Role { get; set; }
-        public virtual DbSet<State> State { get; set; }
         public virtual DbSet<User> User { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            base.OnModelCreating(modelBuilder);
+
             modelBuilder.Entity<Bill>(entity =>
             {
                 entity.ToTable("Bill_");
@@ -60,26 +61,6 @@ namespace Persistencia
                     .HasColumnType("datetime");
             });
 
-            modelBuilder.Entity<Role>(entity =>
-            {
-                entity.ToTable("Role_");
-
-                entity.Property(e => e.Description)
-                    .IsRequired()
-                    .HasColumnName("Description_")
-                    .HasMaxLength(150);
-            });
-
-            modelBuilder.Entity<State>(entity =>
-            {
-                entity.ToTable("State_");
-
-                entity.Property(e => e.Description)
-                    .IsRequired()
-                    .HasColumnName("Description_")
-                    .HasMaxLength(150);
-            });
-
             modelBuilder.Entity<User>(entity =>
             {
                 entity.ToTable("User_");
@@ -91,32 +72,7 @@ namespace Persistencia
                 entity.Property(e => e.LastNames)
                     .IsRequired()
                     .HasMaxLength(150);
-
-                entity.Property(e => e.Password)
-                    .IsRequired()
-                    .HasColumnName("Password_")
-                    .HasMaxLength(150);
-
-                entity.Property(e => e.UserName)
-                    .IsRequired()
-                    .HasMaxLength(150);
-
-                entity.HasOne(d => d.Role)
-                    .WithMany(p => p.User)
-                    .HasForeignKey(d => d.RoleId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("UserFK_Role");
-
-                entity.HasOne(d => d.State)
-                    .WithMany(p => p.User)
-                    .HasForeignKey(d => d.StateId)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("UserFK_State");
             });
-
-            OnModelCreatingPartial(modelBuilder);
         }
-
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
     }
 }

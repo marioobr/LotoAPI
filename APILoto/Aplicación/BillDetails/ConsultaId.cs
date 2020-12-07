@@ -7,16 +7,16 @@ using System.Threading.Tasks;
 using System.Threading;
 using Persistencia;
 
-namespace Aplicación.States
+namespace Aplicación.BillDetails
 {
-    public class ConsultaStateId
+    public class ConsultaDetailId
     {
-        public class OneState : IRequest<State>
+        public class OneDetail : IRequest<BillDetail>
         {
             public int Id { get; set; }
         }
 
-        public class Manejador : IRequestHandler<OneState, State>
+        public class Manejador : IRequestHandler<OneDetail, BillDetail>
         {
             private readonly LotteryContext _contex;
             public Manejador(LotteryContext context)
@@ -24,10 +24,10 @@ namespace Aplicación.States
                 _contex = context;
             }
 
-            public async Task<State> Handle(OneState request, CancellationToken cancellationToken)
+            public async Task<BillDetail> Handle(OneDetail request, CancellationToken cancellationToken)
             {
-                var State = await _contex.State.FindAsync(request.Id);
-                return State;
+                var Detail = await _contex.BillDetail.FindAsync(request.Id);
+                return Detail;
             }
         }
     }

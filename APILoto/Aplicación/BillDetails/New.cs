@@ -7,13 +7,14 @@ using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
 
-namespace Aplicación.Roles
+namespace Aplicación.BillDetails
 {
     public class New
     {
         public class Create : IRequest
         {
-            public string Description { get; set; }
+            public double invesment { get; set; }
+            public int number { get; set; }
 
         }
         public class Manejador : IRequestHandler<Create>
@@ -25,19 +26,20 @@ namespace Aplicación.Roles
             }
             public async Task<Unit> Handle(Create request, CancellationToken cancellationToken)
             {
-                var Role = new Role
+                var detail = new BillDetail
                 {
-                    Description = request.Description
+                    Investment = request.invesment,
+                    Number = request.number
                 };
 
-                _context.Role.Add(Role);
+                _context.BillDetail.Add(detail);
                 var data = await _context.SaveChangesAsync();
                 if(data > 0)
                 {
                     return Unit.Value;
                 }
 
-                throw new Exception("No es posible agregar Rol");
+                throw new Exception("No es posible agregar Detalle en factura");
             }
         }
     }

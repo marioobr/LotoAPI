@@ -7,19 +7,23 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Dominio;
 using Persistencia;
+using MediatR;
 
 namespace APILoto.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BillDetailsController : ControllerBase
+    public class BillDetailsController : MiControllerBase
     {
+        private readonly IMediator _mediator;
         private readonly LotteryContext _context;
 
-        public BillDetailsController(LotteryContext context)
+        public BillDetailsController(IMediator mediator, LotteryContext context)
         {
             _context = context;
+            _mediator = mediator;
         }
+
 
         // GET: api/BillDetails
         [HttpGet]

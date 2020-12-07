@@ -9,22 +9,14 @@ using Dominio;
 using Persistencia;
 using MediatR;
 using Aplicación.Users;
+using Aplicación.Security;
 
 namespace APILoto.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class UsersController : ControllerBase
+    public class UsersController : MiControllerBase
     {
-
-        private readonly IMediator _mediator;
-        private readonly LotteryContext _context;
-
-        public UsersController(IMediator mediator, LotteryContext context)
-        {
-            _context = context;
-            _mediator = mediator;
-        }
 
         // GET: api/Users
         [HttpGet]
@@ -45,6 +37,18 @@ namespace APILoto.Controllers
             }
 
             return user;
+        }
+        //Crear usuario
+        [HttpPost]
+        public async Task<ActionResult<Unit>> PostUser(New.Create data)
+        {
+            return await _mediator.Send(data);
+        }
+        //Login
+        [HttpPost("Login")]
+        public async Task<ActionResult<UsuarioData>> Login(Login.New data)
+        {
+            return await _mediator.Send(data);
         }
 
         // PUT: api/Users/5
@@ -77,7 +81,7 @@ namespace APILoto.Controllers
             }
 
             return NoContent();
-        }*/
+        }
 
         // POST: api/Users
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
@@ -104,9 +108,9 @@ namespace APILoto.Controllers
             return user;
         }
 
-        private bool UserExists(int id)
+        private bool UserExists(string id)
         {
-            return _context.User.Any(e => e.UserId == id);
-        }
+            return _context.User.Any(e => e.Id == id);
+        }*/
     }
 }

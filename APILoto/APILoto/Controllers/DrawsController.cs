@@ -7,19 +7,23 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Dominio;
 using Persistencia;
+using MediatR;
 
 namespace APILoto.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class DrawsController : ControllerBase
+    public class DrawsController : MiControllerBase
     {
+        private readonly IMediator _mediator;
         private readonly LotteryContext _context;
 
-        public DrawsController(LotteryContext context)
+        public DrawsController(IMediator mediator, LotteryContext context)
         {
             _context = context;
+            _mediator = mediator;
         }
+
 
 
         // POST: api/Draws

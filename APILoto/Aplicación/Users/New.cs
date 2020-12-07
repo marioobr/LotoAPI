@@ -16,22 +16,20 @@ namespace Aplicación.Users
         {
             public string FirstNames { get; set; }
             public string LastNames { get; set; }
-            public int Role { get; set; }
-            public int State { get; set; }
             public string UserName { get; set; }
             public string Password { get; set; }
+            public string Email { get; set; }
 
         }
-        public class NuevoValidacion : AbstractValidator<Create>
+        public class NewValidacion : AbstractValidator<Create>
         {
-            public NuevoValidacion()
+            public NewValidacion()
             {
                 RuleFor(x => x.FirstNames).NotEmpty();
                 RuleFor(x => x.LastNames).NotEmpty();
-                RuleFor(x => x.Role).NotEmpty();
                 RuleFor(x => x.Password).NotEmpty();
                 RuleFor(x => x.UserName).NotEmpty();
-                RuleFor(x => x.State).NotEmpty();
+                RuleFor(x => x.Email).NotEmpty();
             }
         }
         public class Manejador : IRequestHandler<Create>
@@ -47,10 +45,9 @@ namespace Aplicación.Users
                 {
                     FirstNames = request.FirstNames,
                     LastNames = request.LastNames,
-                    RoleId = request.Role,
-                    StateId = request.State,
                     UserName = request.UserName,
-                    Password = request.Password
+                    PasswordHash = request.Password,
+                    Email = request.Email
                 };
 
                 _context.User.Add(User);

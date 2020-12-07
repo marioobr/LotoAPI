@@ -11,7 +11,7 @@ namespace Dominio
             BillDetail = new HashSet<BillDetail>();
         }*/
 
-        public int BillId { get; set; }
+        public Guid BillId { get; set; }
         public DateTime Date { get; set; }
         public double Total { get; set; }
 

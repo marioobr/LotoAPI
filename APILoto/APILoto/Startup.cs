@@ -14,12 +14,17 @@ using Microsoft.Extensions.Logging;
 using Persistencia;
 using MediatR;
 using Aplicación.Users;
+using FluentValidation.AspNetCore;
+using Dominio;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Microsoft.AspNetCore.Authentication;
 
 namespace APILoto
 {
     public class Startup
     {
-        readonly string OriginPolicy = "_originPolicy";
+        //readonly string OriginPolicy = "_originPolicy";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -34,7 +39,13 @@ namespace APILoto
             var connection = Configuration.GetConnectionString("APILottery");
             services.AddDbContextPool<LotteryContext>(opt => opt.UseSqlServer(connection));
             services.AddMediatR(typeof(Consulta.Manejador).Assembly);
-            services.AddControllers();
+            services.AddControllers().AddFluentValidation(cfg => cfg.RegisterValidatorsFromAssemblyContaining<New>());
+            var builder = services.AddIdentityCore<User>();
+            var identityBuilder = new IdentityBuilder(builder.UserType, builder.Services);
+
+            identityBuilder.AddEntityFrameworkStores<LotteryContext>();
+            identityBuilder.AddSignInManager<SignInManager<User>>();
+            services.TryAddSingleton<ISystemClock, SystemClock>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

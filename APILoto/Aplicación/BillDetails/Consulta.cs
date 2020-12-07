@@ -8,22 +8,22 @@ using System.Threading;
 using Persistencia;
 using Microsoft.EntityFrameworkCore;
 
-namespace Aplicación.States
+namespace Aplicación.BillDetails
 {
-    public class ConsultaStates
+    public class Consulta
     {
-        public class ListaStates:IRequest<List<State>> { }
-        public class Manejador : IRequestHandler<ListaStates, List<State>>
+        public class ListaDetails:IRequest<List<BillDetail>> { }
+        public class Manejador : IRequestHandler<ListaDetails, List<BillDetail>>
         {
             private readonly LotteryContext _context;
             public Manejador(LotteryContext context)
             {
                 _context = context;
             }
-            public async Task<List<State>> Handle(ListaStates request, CancellationToken cancellationToken)
+            public async Task<List<BillDetail>> Handle(ListaDetails request, CancellationToken cancellationToken)
             {
-                var States = await _context.State.ToListAsync();
-                return States;
+                var Details = await _context.BillDetail.ToListAsync();
+                return Details;
             }
         }
     }

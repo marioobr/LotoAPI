@@ -7,19 +7,24 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Dominio;
 using Persistencia;
+using Aplicación.Bills;
+using MediatR;
 
 namespace APILoto.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BillsController : ControllerBase
+    public class BillsController : MiControllerBase
     {
+        private readonly IMediator _mediator;
         private readonly LotteryContext _context;
 
-        public BillsController(LotteryContext context)
+        public BillsController(IMediator mediator, LotteryContext context)
         {
             _context = context;
+            _mediator = mediator;
         }
+
 
         // GET: api/Bills
         [HttpGet]
@@ -40,6 +45,12 @@ namespace APILoto.Controllers
             }
 
             return bill;
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<Unit>> PostUser(New.Create data)
+        {
+            return await _mediator.Send(data);
         }
 
         // PUT: api/Bills/5

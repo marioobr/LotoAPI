@@ -16,6 +16,8 @@ namespace Aplicación.Bills
             public DateTime Date { get; set; }
             public float Total { get; set; }
 
+            public List<Guid> ListaDetalle { get; set; }
+
         }
         public class Manejador : IRequestHandler<Create>
         {
@@ -26,13 +28,29 @@ namespace Aplicación.Bills
             }
             public async Task<Unit> Handle(Create request, CancellationToken cancellationToken)
             {
+                Guid _BillId = Guid.NewGuid();
                 var Bill = new Bill
                 {
+                    BillId = _BillId,
                     Date = request.Date,
                     Total = request.Total
                 };
 
                 _context.Bill.Add(Bill);
+
+                if (request.ListaDetalle != null)
+                {
+                    foreach(var dt in request.ListaDetalle)
+                    {
+                        var FacturaDetalle = new BillDetail()
+                        {
+                            BillId = _BillId,
+                            DetailId = dt
+                        };
+                        _context.BillDetail.Add(FacturaDetalle);
+                    }
+                }
+
                 var data = await _context.SaveChangesAsync();
                 if(data > 0)
                 {

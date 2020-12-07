@@ -326,8 +326,6 @@ C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Humanizer
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\runtimes\linux-mips64\native\libe_sqlite3.so
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\FluentValidation.dll
-C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.csproj.CoreCompileInputs.cache
-C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -502,3 +500,8 @@ C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.dll
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.pdb
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.genruntimeconfig.cache
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\FluentValidation.AspNetCore.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\FluentValidation.DependencyInjectionExtensions.dll
