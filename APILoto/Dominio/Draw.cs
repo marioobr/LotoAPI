@@ -13,6 +13,7 @@ namespace Dominio
 
         public Guid DrawId { get; set; }
         public DateTime Date { get; set; }
+        public int Number { get; set; }
         public int? Winner { get; set; }
 
         public virtual ICollection<BillDetail> BillDetail { get; set; }

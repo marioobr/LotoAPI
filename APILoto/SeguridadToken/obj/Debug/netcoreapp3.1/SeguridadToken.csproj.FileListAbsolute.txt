@@ -1,0 +1,5 @@
+C:\Users\Mario\Desktop\LotoAPI\APILoto\SeguridadToken\bin\Debug\netcoreapp3.1\SeguridadToken.deps.json
+C:\Users\Mario\Desktop\LotoAPI\APILoto\SeguridadToken\bin\Debug\netcoreapp3.1\SeguridadToken.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\SeguridadToken\obj\Debug\netcoreapp3.1\SeguridadToken.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\LotoAPI\APILoto\SeguridadToken\obj\Debug\netcoreapp3.1\SeguridadToken.AssemblyInfoInputs.cache
+C:\Users\Mario\Desktop\LotoAPI\APILoto\SeguridadToken\obj\Debug\netcoreapp3.1\SeguridadToken.AssemblyInfo.cs

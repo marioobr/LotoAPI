@@ -50,9 +50,13 @@ namespace APILoto.Controllers
             return await _mediator.Send(data);
         }
 
-        
+        [HttpPut]
+        public async Task<ActionResult<Unit>> Editar(Winner.WinnerNumber data)
+        {
+            return await _mediator.Send(data);
+        }
 
-        // PUT: api/Draws/5
+        /*// PUT: api/Draws/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
@@ -84,12 +88,7 @@ namespace APILoto.Controllers
             return NoContent();
         }
 
-        private bool DrawExists(Guid id)
-        {
-            return _context.Draw.Any(e => e.DrawId == id);
-        }
-
-        /*// POST: api/Draws
+        // POST: api/Draws
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]

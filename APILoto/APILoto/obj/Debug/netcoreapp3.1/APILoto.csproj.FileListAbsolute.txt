@@ -505,3 +505,4 @@ C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\staticweb
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.dll
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.pdb
 C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\obj\Debug\netcoreapp3.1\APILoto.genruntimeconfig.cache
+C:\Users\Mario\Desktop\LotoAPI\APILoto\APILoto\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll

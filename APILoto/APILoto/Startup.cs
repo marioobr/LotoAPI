@@ -19,6 +19,7 @@ using Dominio;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.AspNetCore.Authentication;
+using ProyectoCore.Middleware;
 
 namespace APILoto
 {
@@ -51,6 +52,8 @@ namespace APILoto
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+
+            app.UseMiddleware<ManejadorErrorMiddleware>();
             app.UseCors(options => {
 
                 options.WithOrigins("http://localhost:1234");

@@ -14,6 +14,7 @@ namespace Aplicación.Draws
         public class Create : IRequest
         {
             public DateTime Date { get; set; }
+            public int Number { get; set; }
 
         }
         public class Manejador : IRequestHandler<Create>
@@ -29,6 +30,7 @@ namespace Aplicación.Draws
                 var Draw = new Draw
                 {
                     DrawId = id,
+                    Number = request.Number,
                     Date = request.Date
                 };
 

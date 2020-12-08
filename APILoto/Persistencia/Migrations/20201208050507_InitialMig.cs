@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Persistencia.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class InitialMig : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,6 +40,7 @@ namespace Persistencia.Migrations
                 {
                     DrawId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Date_ = table.Column<DateTime>(type: "datetime", nullable: false),
+                    Number = table.Column<int>(type: "int", nullable: false),
                     Winner = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>

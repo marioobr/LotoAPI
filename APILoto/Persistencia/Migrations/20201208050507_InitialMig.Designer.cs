@@ -10,8 +10,8 @@ using Persistencia;
 namespace Persistencia.Migrations
 {
     [DbContext(typeof(LotteryContext))]
-    [Migration("20201207235547_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20201208050507_InitialMig")]
+    partial class InitialMig
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -76,6 +76,9 @@ namespace Persistencia.Migrations
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime")
                         .HasColumnName("Date_");
+
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
 
                     b.Property<int?>("Winner")
                         .HasColumnType("int");

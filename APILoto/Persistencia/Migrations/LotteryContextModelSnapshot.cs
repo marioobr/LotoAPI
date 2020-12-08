@@ -75,6 +75,9 @@ namespace Persistencia.Migrations
                         .HasColumnType("datetime")
                         .HasColumnName("Date_");
 
+                    b.Property<int>("Number")
+                        .HasColumnType("int");
+
                     b.Property<int?>("Winner")
                         .HasColumnType("int");
 
