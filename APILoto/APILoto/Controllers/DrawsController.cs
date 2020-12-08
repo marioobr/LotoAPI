@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Dominio;
 using Persistencia;
 using MediatR;
+using Aplicación.Draws;
 
 namespace APILoto.Controllers
 {
@@ -15,41 +16,25 @@ namespace APILoto.Controllers
     [ApiController]
     public class DrawsController : MiControllerBase
     {
-        private readonly IMediator _mediator;
         private readonly LotteryContext _context;
 
-        public DrawsController(IMediator mediator, LotteryContext context)
+        public DrawsController(LotteryContext context)
         {
             _context = context;
-            _mediator = mediator;
-        }
-
-
-
-        // POST: api/Draws
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
-        public async Task<ActionResult<Draw>> PostDraw(Draw draw)
-        {
-            _context.Draw.Add(draw);
-            await _context.SaveChangesAsync();
-
-            return CreatedAtAction("GetDraw", new { id = draw.DrawId }, draw);
         }
 
         // GET: api/Draws
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Draw>>> GetDraw()
+        public async Task<ActionResult<IEnumerable<Draw>>> GetDraws()
         {
-            return await _context.Draw.ToListAsync();
+            return await _mediator.Send(new Consulta.ListaDraws());
         }
 
         // GET: api/Draws/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Draw>> GetDraw(int id)
+        public async Task<ActionResult<Draw>> GetDraw(Guid id)
         {
-            var draw = await _context.Draw.FindAsync(id);
+            var draw = await _mediator.Send(new ConsultaDrawId.OneDraw { Id = id });
 
             if (draw == null)
             {
@@ -58,12 +43,20 @@ namespace APILoto.Controllers
 
             return draw;
         }
+        //Crear usuario
+        [HttpPost]
+        public async Task<ActionResult<Unit>> PostDraw(New.Create data)
+        {
+            return await _mediator.Send(data);
+        }
+
+        
 
         // PUT: api/Draws/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        /*[HttpPut("{id}")]
-        public async Task<IActionResult> PutDraw(int id, Draw draw)
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutDraw(Guid id, Draw draw)
         {
             if (id != draw.DrawId)
             {
@@ -91,7 +84,12 @@ namespace APILoto.Controllers
             return NoContent();
         }
 
-        // POST: api/Draws
+        private bool DrawExists(Guid id)
+        {
+            return _context.Draw.Any(e => e.DrawId == id);
+        }
+
+        /*// POST: api/Draws
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]

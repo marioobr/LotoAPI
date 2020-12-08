@@ -9,7 +9,7 @@ using Dominio;
 
 namespace Aplicación.Draws
 {
-    class Winner
+    public class Winner
     {
         public class WinnerNumber : IRequest
         {
@@ -30,14 +30,14 @@ namespace Aplicación.Draws
                     Winner = request.number
                 };
 
-                _context.Draw.Add(Draw);
+                _context.Draw.Update(Draw);
                 var data = await _context.SaveChangesAsync();
                 if (data > 0)
                 {
                     return Unit.Value;
                 }
 
-                throw new Exception("No es posible agregar Sorteo");
+                throw new Exception("No es posible modificar Sorteo");
             }
         }
     }

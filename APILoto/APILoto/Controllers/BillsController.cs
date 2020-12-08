@@ -16,28 +16,19 @@ namespace APILoto.Controllers
     [ApiController]
     public class BillsController : MiControllerBase
     {
-        private readonly IMediator _mediator;
-        private readonly LotteryContext _context;
-
-        public BillsController(IMediator mediator, LotteryContext context)
-        {
-            _context = context;
-            _mediator = mediator;
-        }
-
 
         // GET: api/Bills
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Bill>>> GetBill()
         {
-            return await _context.Bill.ToListAsync();
+            return await _mediator.Send(new Consulta.ListaBills());
         }
 
         // GET: api/Bills/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Bill>> GetBill(int id)
+        public async Task<ActionResult<Bill>> GetBill(Guid id)
         {
-            var bill = await _context.Bill.FindAsync(id);
+            var bill = await _mediator.Send(new ConsultaBillId.OneBill{ Id = id });
 
             if (bill == null)
             {
@@ -46,9 +37,9 @@ namespace APILoto.Controllers
 
             return bill;
         }
-
+        //Crear Bill
         [HttpPost]
-        public async Task<ActionResult<Unit>> PostUser(New.Create data)
+        public async Task<ActionResult<Unit>> PostBill(New.Create data)
         {
             return await _mediator.Send(data);
         }

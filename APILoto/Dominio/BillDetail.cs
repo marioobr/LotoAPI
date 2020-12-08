@@ -7,6 +7,11 @@ namespace Dominio
 {
     public class BillDetail
     {
+        /*public BillDetail()
+        {
+            Bill = new Bill();
+            Draw = new Draw();
+        }*/
         [Key]
         public Guid DetailId { get; set; }
         public Guid BillId { get; set; }

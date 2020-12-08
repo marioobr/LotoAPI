@@ -16,7 +16,7 @@ namespace Aplicación.Bills
             public DateTime Date { get; set; }
             public float Total { get; set; }
 
-            public List<Guid> ListaDetalle { get; set; }
+            public List<BillDetail> Numbers { get; set; }
 
         }
         public class Manejador : IRequestHandler<Create>
@@ -38,14 +38,18 @@ namespace Aplicación.Bills
 
                 _context.Bill.Add(Bill);
 
-                if (request.ListaDetalle != null)
+                if (request.Numbers != null)
                 {
-                    foreach(var dt in request.ListaDetalle)
+                    foreach(var dt in request.Numbers)
                     {
+                        Guid idDet = Guid.NewGuid();
                         var FacturaDetalle = new BillDetail()
                         {
                             BillId = _BillId,
-                            DetailId = dt
+                            DetailId = idDet,
+                            Number = dt.Number,
+                            DrawId = dt.DrawId,
+                            Investment = dt.Investment
                         };
                         _context.BillDetail.Add(FacturaDetalle);
                     }

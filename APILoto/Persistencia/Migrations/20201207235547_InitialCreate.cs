@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Persistencia.Migrations
 {
-    public partial class IdentityInicial : Migration
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,8 +25,7 @@ namespace Persistencia.Migrations
                 name: "Bill_",
                 columns: table => new
                 {
-                    BillId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    BillId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Date_ = table.Column<DateTime>(type: "datetime", nullable: false),
                     Total = table.Column<double>(type: "float", nullable: false)
                 },
@@ -39,8 +38,7 @@ namespace Persistencia.Migrations
                 name: "Draw_",
                 columns: table => new
                 {
-                    DrawId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
+                    DrawId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Date_ = table.Column<DateTime>(type: "datetime", nullable: false),
                     Winner = table.Column<int>(type: "int", nullable: true)
                 },
@@ -101,10 +99,9 @@ namespace Persistencia.Migrations
                 name: "BillDetail_",
                 columns: table => new
                 {
-                    DetailId = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    BillId = table.Column<int>(type: "int", nullable: false),
-                    DrawId = table.Column<int>(type: "int", nullable: false),
+                    DetailId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    BillId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    DrawId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Number = table.Column<int>(type: "int", nullable: false),
                     Investment = table.Column<double>(type: "float", nullable: false)
                 },

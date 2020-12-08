@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Dominio;
 using Persistencia;
 using MediatR;
+using Aplicación.BillDetails;
 
 namespace APILoto.Controllers
 {
@@ -15,28 +16,20 @@ namespace APILoto.Controllers
     [ApiController]
     public class BillDetailsController : MiControllerBase
     {
-        private readonly IMediator _mediator;
-        private readonly LotteryContext _context;
-
-        public BillDetailsController(IMediator mediator, LotteryContext context)
-        {
-            _context = context;
-            _mediator = mediator;
-        }
 
 
         // GET: api/BillDetails
         [HttpGet]
         public async Task<ActionResult<IEnumerable<BillDetail>>> GetBillDetail()
         {
-            return await _context.BillDetail.ToListAsync();
+            return await _mediator.Send(new Consulta.ListaDetails());
         }
 
         // GET: api/BillDetails/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<BillDetail>> GetBillDetail(int id)
+        public async Task<ActionResult<BillDetail>> GetBillDetail(Guid id)
         {
-            var billDetail = await _context.BillDetail.FindAsync(id);
+            var billDetail = await _mediator.Send(new ConsultaDetailId.OneDetail { Id = id });
 
             if (billDetail == null)
             {
@@ -44,6 +37,12 @@ namespace APILoto.Controllers
             }
 
             return billDetail;
+        }
+        //Crear Detail
+        [HttpPost]
+        public async Task<ActionResult<Unit>> PostDetail(New.Create data)
+        {
+            return await _mediator.Send(data);
         }
 
         // PUT: api/BillDetails/5

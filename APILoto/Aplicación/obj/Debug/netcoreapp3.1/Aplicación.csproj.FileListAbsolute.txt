@@ -1,16 +1,3 @@
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Aplicación.deps.json
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Aplicación.dll
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.csprojAssemblyReference.cache
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.AssemblyInfoInputs.cache
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.AssemblyInfo.cs
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Aplicación.pdb
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Dominio.dll
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Persistencia.dll
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Dominio.pdb
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Persistencia.pdb
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.csproj.CopyComplete
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.dll
-C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.pdb
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Aplicación.deps.json
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Aplicación.dll
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Aplicación.pdb
@@ -25,4 +12,17 @@ C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.csproj.CopyComplete
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.dll
 C:\Users\Direccion ENAH\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.pdb
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Aplicación.deps.json
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Aplicación.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Aplicación.pdb
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Dominio.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Persistencia.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Dominio.pdb
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\bin\Debug\netcoreapp3.1\Persistencia.pdb
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.csprojAssemblyReference.cache
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.AssemblyInfoInputs.cache
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.AssemblyInfo.cs
 C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.csproj.CoreCompileInputs.cache
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.csproj.CopyComplete
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.dll
+C:\Users\Mario\Desktop\LotoAPI\APILoto\Aplicación\obj\Debug\netcoreapp3.1\Aplicación.pdb

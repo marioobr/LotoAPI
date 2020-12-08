@@ -13,7 +13,7 @@ namespace Aplicación.BillDetails
     {
         public class OneDetail : IRequest<BillDetail>
         {
-            public int Id { get; set; }
+            public Guid Id { get; set; }
         }
 
         public class Manejador : IRequestHandler<OneDetail, BillDetail>

@@ -13,7 +13,7 @@ namespace Aplicación.Draws
     {
         public class OneDraw : IRequest<Draw>
         {
-            public int Id { get; set; }
+            public Guid Id { get; set; }
         }
 
         public class Manejador : IRequestHandler<OneDraw, Draw>

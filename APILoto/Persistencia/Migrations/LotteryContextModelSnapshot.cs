@@ -21,10 +21,9 @@ namespace Persistencia.Migrations
 
             modelBuilder.Entity("Dominio.Bill", b =>
                 {
-                    b.Property<int>("BillId")
+                    b.Property<Guid>("BillId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime")
@@ -40,16 +39,15 @@ namespace Persistencia.Migrations
 
             modelBuilder.Entity("Dominio.BillDetail", b =>
                 {
-                    b.Property<int>("DetailId")
+                    b.Property<Guid>("DetailId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("BillId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("BillId")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("DrawId")
-                        .HasColumnType("int");
+                    b.Property<Guid>("DrawId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<double>("Investment")
                         .HasColumnType("float");
@@ -69,10 +67,9 @@ namespace Persistencia.Migrations
 
             modelBuilder.Entity("Dominio.Draw", b =>
                 {
-                    b.Property<int>("DrawId")
+                    b.Property<Guid>("DrawId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .UseIdentityColumn();
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("Date")
                         .HasColumnType("datetime")

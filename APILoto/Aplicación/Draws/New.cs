@@ -25,8 +25,10 @@ namespace Aplicación.Draws
             }
             public async Task<Unit> Handle(Create request, CancellationToken cancellationToken)
             {
+                Guid id = Guid.NewGuid();
                 var Draw = new Draw
                 {
+                    DrawId = id,
                     Date = request.Date
                 };
 
