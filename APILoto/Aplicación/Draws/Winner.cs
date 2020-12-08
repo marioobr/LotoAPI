@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using Dominio;
 using Aplicacion.ManejadorError;
 using System.Net;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aplicación.Draws
 {
@@ -15,7 +17,7 @@ namespace Aplicación.Draws
     {
         public class WinnerNumber : IRequest
         {
-            public Guid id { get; set; }
+            public int number { get; set; }
             public int winner { get; set; }
 
         }
@@ -31,12 +33,12 @@ namespace Aplicación.Draws
 
             public async Task<Unit> Handle(WinnerNumber request, CancellationToken cancellationToken)
             {
-                var draw = await _context.Draw.FindAsync(request.id);
+                var draw = await _context.Draw.Where(x => x.Number == request.number).SingleOrDefaultAsync();
 
                 if (draw == null)
                 {
-                    //throw new Exception("El curso no existe");
-                    throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { curso = "No se encontró el sorteo" });
+                    throw new Exception("El sorteo no existe");
+                    //throw new ManejadorExcepcion(HttpStatusCode.NotFound, new { draw = "No se encontró el sorteo" });
                 }
                 
                 draw.Winner = request.winner;

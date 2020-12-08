@@ -6,6 +6,8 @@ using Dominio;
 using System.Threading.Tasks;
 using System.Threading;
 using Persistencia;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aplicación.Draws
 {
@@ -13,7 +15,7 @@ namespace Aplicación.Draws
     {
         public class OneDraw : IRequest<Draw>
         {
-            public Guid Id { get; set; }
+            public int Id { get; set; }
         }
 
         public class Manejador : IRequestHandler<OneDraw, Draw>
@@ -26,7 +28,7 @@ namespace Aplicación.Draws
 
             public async Task<Draw> Handle(OneDraw request, CancellationToken cancellationToken)
             {
-                var Draw = await _contex.Draw.FindAsync(request.Id);
+                var Draw = await _contex.Draw.Where(c => c.Number == request.Id).SingleOrDefaultAsync();
                 return Draw;
             }
         }

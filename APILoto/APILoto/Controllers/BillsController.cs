@@ -16,12 +16,25 @@ namespace APILoto.Controllers
     [ApiController]
     public class BillsController : MiControllerBase
     {
+        private readonly LotteryContext _context;
+
+        public BillsController(LotteryContext context)
+        {
+            _context = context;
+        }
 
         // GET: api/Bills
-        [HttpGet]
+        /*[HttpGet]
         public async Task<ActionResult<IEnumerable<Bill>>> GetBill()
         {
             return await _mediator.Send(new Consulta.ListaBills());
+        }*/
+        // GET: api/Albums
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Bill>>> GetBill1()
+        {
+            return await _context.Bill.ToListAsync();
+            // return await _context.Album.Join(_context.Artista, album => album.ArtistaId, artista => artista.ArtistaId, (album, artista) => new AlbumArtista(album.Titulo, artista.Nombre)).ToListAsync();
         }
 
         // GET: api/Bills/5

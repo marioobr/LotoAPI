@@ -31,10 +31,10 @@ namespace APILoto.Controllers
         }
 
         // GET: api/Draws/5
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Draw>> GetDraw(Guid id)
+        [HttpGet("{number}")]
+        public async Task<ActionResult<Draw>> GetDraw(int number)
         {
-            var draw = await _mediator.Send(new ConsultaDrawId.OneDraw { Id = id });
+            var draw = await _mediator.Send(new ConsultaDrawId.OneDraw { Id = number });
 
             if (draw == null)
             {
@@ -43,7 +43,20 @@ namespace APILoto.Controllers
 
             return draw;
         }
-        //Crear usuario
+        /*//GET: api/Draws/numero_sorteo
+        [HttpGet("number/{number}")]
+        public async Task<ActionResult<IEnumerable<Draw>>> GetAlbumNombre(int number)
+        {
+            var draw = _context.Draw.AsQueryable();
+
+            if (number != 0 || number > 0)
+            {
+                draw = _context.Draw.Where(c => c.Number.Equals(number));
+            }
+
+            return await draw.ToListAsync();
+        }*/
+        //Crear sorteo
         [HttpPost]
         public async Task<ActionResult<Unit>> PostDraw(New.Create data)
         {

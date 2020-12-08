@@ -6,10 +6,10 @@ namespace Dominio
 {
     public class Bill
     {
-        /*public Bill()
+        public Bill()
         {
             BillDetail = new HashSet<BillDetail>();
-        }*/
+        }
 
         public Guid BillId { get; set; }
         public DateTime Date { get; set; }
