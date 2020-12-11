@@ -24,22 +24,22 @@ namespace APILoto.Controllers
         }
 
         // GET: api/Bills
-        /*[HttpGet]
+        [HttpGet]
         public async Task<ActionResult<IEnumerable<Bill>>> GetBill()
         {
             return await _mediator.Send(new Consulta.ListaBills());
-        }*/
+        }
         // GET: api/Albums
-        [HttpGet]
+        /*[HttpGet]
         public async Task<ActionResult<IEnumerable<Bill>>> GetBill1()
         {
             return await _context.Bill.ToListAsync();
             // return await _context.Album.Join(_context.Artista, album => album.ArtistaId, artista => artista.ArtistaId, (album, artista) => new AlbumArtista(album.Titulo, artista.Nombre)).ToListAsync();
-        }
+        }*/
 
         // GET: api/Bills/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Bill>> GetBill(Guid id)
+        public async Task<ActionResult<Bill>> GetOneBill(Guid id)
         {
             var bill = await _mediator.Send(new ConsultaBillId.OneBill{ Id = id });
 

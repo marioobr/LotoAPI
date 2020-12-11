@@ -6,6 +6,8 @@ using Persistencia;
 using MediatR;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
 
 namespace Aplicación.Bills
 {
@@ -14,7 +16,7 @@ namespace Aplicación.Bills
         public class Create : IRequest
         {
             public DateTime Date { get; set; }
-            public float Total { get; set; }
+            //public float Total { get; set; }
 
             public List<BillDetail> Numbers { get; set; }
 
@@ -29,18 +31,19 @@ namespace Aplicación.Bills
             public async Task<Unit> Handle(Create request, CancellationToken cancellationToken)
             {
                 Guid _BillId = Guid.NewGuid();
+                double total = 0;
                 var Bill = new Bill
                 {
                     BillId = _BillId,
                     Date = request.Date,
-                    Total = request.Total
+                    Total = total
                 };
 
                 _context.Bill.Add(Bill);
 
                 if (request.Numbers != null)
                 {
-                    foreach(var dt in request.Numbers)
+                    foreach (var dt in request.Numbers)
                     {
                         Guid idDet = Guid.NewGuid();
                         var FacturaDetalle = new BillDetail()
@@ -52,8 +55,11 @@ namespace Aplicación.Bills
                             Investment = dt.Investment
                         };
                         _context.BillDetail.Add(FacturaDetalle);
+
+                        total += dt.Investment;
                     }
                 }
+                Bill.Total = total;
 
                 var data = await _context.SaveChangesAsync();
                 if(data > 0)
