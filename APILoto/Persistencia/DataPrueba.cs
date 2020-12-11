@@ -21,16 +21,25 @@ namespace Persistencia
                     UserName = "marioobr",
                     Email = "obrlop@gmail.com"
                 };
-                await usuarioManager.CreateAsync(usuario, "Cl@ro2020");
+                await usuarioManager.CreateAsync(usuario, "Cl@ro2020"); 
+                
+                var usuario1 = new User()
+                {
+                    FirstNames = "Elliot",
+                    LastNames = "Williamson",
+                    UserName = "elliotfrm",
+                    Email = "davidlanuswillock@gmail.com"
+                };
+                await usuarioManager.CreateAsync(usuario1, "ElliotWilliamson30@");
             }
-            var usuario1 = new User()
+            /*var usuario1 = new User()
             {
                 FirstNames = "Elliot",
                 LastNames = "Williamson",
                 UserName = "elliotfrm",
                 Email = "davidlanuswillock@gmail.com"
             };
-            await usuarioManager.CreateAsync(usuario1, "ElliotWilliamson30@");
+            await usuarioManager.CreateAsync(usuario1, "ElliotWilliamson30@");*/
         }
     }
 }
