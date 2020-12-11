@@ -34,6 +34,8 @@ namespace Aplicación.Draws
             public async Task<Unit> Handle(WinnerNumber request, CancellationToken cancellationToken)
             {
                 var draw = await _context.Draw.Where(x => x.Number == request.number).SingleOrDefaultAsync();
+                var winner = new GetWinner();
+                request.winner = winner.get();
 
                 if (draw == null)
                 {
@@ -50,6 +52,16 @@ namespace Aplicación.Draws
                 }
 
                 throw new Exception("No se actualizó el sorteo");
+            }
+        }
+
+        public class GetWinner
+        {
+            public int get()
+            {
+                var rdn = new Random();
+                int number = rdn.Next(00, 99);
+                return number;
             }
         }
     }

@@ -34,7 +34,7 @@ namespace APILoto.Controllers
         [HttpGet("{number}")]
         public async Task<ActionResult<Draw>> GetDraw(int number)
         {
-            var draw = await _mediator.Send(new ConsultaDrawId.OneDraw { Id = number });
+            var draw = await _mediator.Send(new ConsultaDrawId.OneDraw { Number = number });
 
             if (draw == null)
             {

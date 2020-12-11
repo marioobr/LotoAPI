@@ -15,7 +15,7 @@ namespace Aplicación.Draws
     {
         public class OneDraw : IRequest<Draw>
         {
-            public int Id { get; set; }
+            public int Number { get; set; }
         }
 
         public class Manejador : IRequestHandler<OneDraw, Draw>
@@ -28,7 +28,7 @@ namespace Aplicación.Draws
 
             public async Task<Draw> Handle(OneDraw request, CancellationToken cancellationToken)
             {
-                var Draw = await _contex.Draw.Where(c => c.Number == request.Id).SingleOrDefaultAsync();
+                var Draw = await _contex.Draw.Where(c => c.Number == request.Number).SingleOrDefaultAsync();
                 return Draw;
             }
         }
